@@ -27,7 +27,7 @@ def download(url,num_retries = 2):
     return html
 '''
 #给请求添加用户代理
-def download(url,user_agent = 'wswp',num_retries = 2):
+def download(url,user_agent = 'wswp',num_retries = 5):
     print 'Downloading:',url
     headers = {'User-agent':user_agent}
     request = urllib2.Request(url,headers = headers)
@@ -43,5 +43,5 @@ def download(url,user_agent = 'wswp',num_retries = 2):
     return html
 
 if __name__ == "__main__":
-    #download('http://httpstat.us/500')
-    download('http://www.meetup.com')
+    print download('http://example.webscraping.com/')
+    #download('http://www.meetup.com')
